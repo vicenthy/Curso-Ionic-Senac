@@ -1,5 +1,7 @@
 # Instalando o angular
 `npm install i -g @angular/cli`
+# Criar um novo Projeto
+`ng new nomeDoPrjoeto`
 # Rodar o projeto 
 `ng serve`
 url padrão `http://localhost:4200/.` 

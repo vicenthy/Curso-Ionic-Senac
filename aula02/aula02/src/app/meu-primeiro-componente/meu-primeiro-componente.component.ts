@@ -15,7 +15,11 @@ interface Tarefa {
 export class MeuPrimeiroComponenteComponent implements OnInit {
 
   constructor() { }
-  tarefas: Tarefa[] = [];
+  tarefas: Tarefa[] = [
+    {titulo: 'Tarefa TESTE', feito: false },
+    {titulo: 'Tarefa TESTE 2', feito: false }
+
+  ];
   tarefa: Tarefa = {titulo: '', feito: false };
 
 

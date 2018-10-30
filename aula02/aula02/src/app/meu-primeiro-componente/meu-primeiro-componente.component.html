@@ -1,16 +1,21 @@
 <div class="container">
-      <div class="row">
-      <input type="text" class="col-md-12"  [(ngModel)]="tarefa.titulo" id="tarefa"  >
 
+  <div class="row">
+    <span *ngIf="verificarFinalizacao()" style="text-align: center;" class="col-md-12 alert alert-primary" role="alert"> Parabéns! Você concluiu todas as tarefas.</span>
+  </div>
+
+      <div class="row">
+      <input type="text" (keydown.enter)="add()" class="form-group col-md-12"  [(ngModel)]="tarefa.titulo" id="tarefa"  >
       </div>
 
       <div class="row">
         <div class="col-md-12">
       <ul>
-        <li  (click)="marcar(tarefa)"
+        <li
           [ngClass]="{'marcado': tarefa.feito}"
         class="alert alert-success" role="alert"
         *ngFor="let tarefa of tarefas">
+        <input type="checkbox"  (click)="marcar(tarefa)" />
           {{tarefa.titulo}}
         </li>
       </ul>

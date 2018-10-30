@@ -27,6 +27,15 @@ export class MeuPrimeiroComponenteComponent implements OnInit {
   ngOnInit() {
   }
 
+  verificarFinalizacao() {
+   return this.tarefas.every( a => a.feito) && this.tarefas.length > 0 ;
+  }
+
+  add() {
+    this.tarefas.push(this.tarefa);
+    this.tarefa = {titulo: '', feito: false};
+  }
+
   marcar(tarefa: Tarefa) {
     if (tarefa.feito) {
       tarefa.feito = false;

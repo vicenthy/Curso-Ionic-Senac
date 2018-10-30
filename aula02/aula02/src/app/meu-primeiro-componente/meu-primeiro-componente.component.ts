@@ -13,18 +13,28 @@ interface Tarefa {
   styleUrls: ['./meu-primeiro-componente.component.css']
 })
 export class MeuPrimeiroComponenteComponent implements OnInit {
-
-  constructor() { }
   tarefas: Tarefa[] = [
-    {titulo: 'Tarefa TESTE', feito: false },
-    {titulo: 'Tarefa TESTE 2', feito: false }
+    { titulo: 'Tarefa TESTE', feito: false },
+    { titulo: 'Tarefa TESTE 2', feito: false }
 
   ];
   tarefa: Tarefa = {titulo: '', feito: false };
 
+  constructor() {
 
+  }
 
   ngOnInit() {
   }
+
+  marcar(tarefa: Tarefa) {
+    if (tarefa.feito) {
+      tarefa.feito = false;
+    } else {
+      tarefa.feito = true;
+    }
+
+  }
+
 
 }

@@ -14,8 +14,8 @@ interface Tarefa {
 })
 export class MeuPrimeiroComponenteComponent implements OnInit {
   tarefas: Tarefa[] = [
-    { titulo: 'Tarefa TESTE', feito: false },
-    { titulo: 'Tarefa TESTE 2', feito: false }
+    {titulo: 'TAREFA 01', feito: false},
+    {titulo: 'TAREFA 02', feito: false}
 
   ];
   tarefa: Tarefa = {titulo: '', feito: false };
@@ -24,16 +24,45 @@ export class MeuPrimeiroComponenteComponent implements OnInit {
 
   }
 
+
+  /*
+    remover item de um array
+    var indice = arr.findIndex(obj => obj.valor == numeroARemover);
+    arr.splice(indice, 1);
+    arr = arr.filter(obj => obj.valor != numeroARemover);
+
+    */
+
+
+
   ngOnInit() {
+
+  }
+
+  selecionar(tarefa: Tarefa) {
+    this.tarefa = tarefa;
   }
 
   verificarFinalizacao() {
    return this.tarefas.every( a => a.feito) && this.tarefas.length > 0 ;
   }
 
+  remover(tarefa: Tarefa) {
+    if ( confirm('Confirmar exclusao!')) {
+      //this.tarefas = this.tarefas.filter( a => a !== tarefa);
+      const index = this.tarefas.findIndex(a => a === tarefa);
+      this.tarefas = this.tarefas.slice(index , -1);
+
+    }
+
+  }
   add() {
+    if ( this.tarefas.filter( a => a === this.tarefa).length === 0 ) {
     this.tarefas.push(this.tarefa);
     this.tarefa = {titulo: '', feito: false};
+    } else {
+      this.tarefa = {titulo: '', feito: false };
+    }
   }
 
   marcar(tarefa: Tarefa) {

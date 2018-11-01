@@ -1,7 +1,10 @@
 <div class="container">
 
   <div class="row">
-    <span *ngIf="verificarFinalizacao()" style="text-align: center;" class="col-md-12 alert alert-primary" role="alert"> Parabéns! Você concluiu todas as tarefas.</span>
+    <span *ngIf="verificarFinalizacao()" style="text-align: center;"
+     class="col-md-12 alert alert-primary" role="alert">
+       Parabéns! Você concluiu todas as tarefas.
+      </span>
   </div>
 
       <div class="row">
@@ -13,10 +16,12 @@
       <ul>
         <li
           [ngClass]="{'marcado': tarefa.feito}"
-        class="alert alert-success" role="alert"
+        class="mylistitem alert alert-success" role="alert"
         *ngFor="let tarefa of tarefas">
         <input type="checkbox"  (click)="marcar(tarefa)" />
           {{tarefa.titulo}}
+          <a href="#" (click)="selecionar(tarefa)">editar</a> |
+          <a href="#" (click)="remover(tarefa)">remover</a>
         </li>
       </ul>
       </div>

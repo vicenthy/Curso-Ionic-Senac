@@ -3,3 +3,8 @@
   font-weight: bold;
   text-decoration: line-through;
 }
+
+.mylistitem{
+  list-style: none;
+  text-align: start;
+}

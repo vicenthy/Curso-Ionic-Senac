@@ -2,6 +2,8 @@ const p = document.createElement('p');
 const texto = "Bem vindo ao TypeScript";
 p.textContent = texto;
 document.body.appendChild(p);
+var text = document.getElementById('teste');
+
 
 // Tipos de dados
 var quaquercoisa = {

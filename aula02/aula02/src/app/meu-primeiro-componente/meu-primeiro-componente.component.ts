@@ -19,6 +19,7 @@ export class MeuPrimeiroComponenteComponent implements OnInit {
 
   ];
   tarefa: Tarefa = {titulo: '', feito: false };
+  show = true;
 
   constructor() {
 
@@ -44,14 +45,15 @@ export class MeuPrimeiroComponenteComponent implements OnInit {
   }
 
   verificarFinalizacao() {
-   return this.tarefas.every( a => a.feito) && this.tarefas.length > 0 ;
+   return this.tarefas.every( a => a.feito) && this.tarefas.length > 0 && this.show;
   }
 
   remover(tarefa: Tarefa) {
-    if ( confirm('Confirmar exclusao!')) {
-      //this.tarefas = this.tarefas.filter( a => a !== tarefa);
+    console.log(this.tarefas);
+
+    if ( confirm('Confirmar exclusao!') ) {
       const index = this.tarefas.findIndex(a => a === tarefa);
-      this.tarefas = this.tarefas.slice(index , -1);
+      this.tarefas.splice(index , 1);
 
     }
 

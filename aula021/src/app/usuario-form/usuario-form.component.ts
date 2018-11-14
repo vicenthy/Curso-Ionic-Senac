@@ -12,4 +12,8 @@ export class UsuarioFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  salva() {
+
+  }
+
 }

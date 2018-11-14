@@ -23,5 +23,12 @@ export class UsuarioListComponent implements OnInit {
   novo() {
     this.router.navigate(['novo']);
   }
+  excluir(usuario: Usuario) {
+    this.usuarioService.delete(usuario.id);
+    this.usuarios = this.usuarioService.getAll();
+  }
+  editar(usuario: Usuario) {
+    this.router.navigate([`edit/${usuario.id}`]);
+  }
 
 }

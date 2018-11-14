@@ -17,10 +17,18 @@ public getById(id: number): Usuario {
   return this.usuarios.find(a => a.id === id);
 }
 public create(usuario: Usuario) {
+  this.usuarios.push(usuario);
 }
 public update(usuario: Usuario) {
+  this.usuarios.forEach( u => {
+    if ( u.id === usuario.id ) {
+      usuario = u;
+    }
+  });
+
 }
 public delete (id: number) {
+  this.usuarios = this.usuarios.filter( u => u.id !== id);
 }
 public getAll(): Usuario[] {
   return this.usuarios;

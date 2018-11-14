@@ -2,11 +2,11 @@
 <form (ngSubmit)="salva()">
 <div class="form-group">
 <label for="nome">Nome</label>
-<input id="nome" type="text" class="form-control">
+<input id="nome" name="nome" [(ngModel)]="usuario.nome" type="text" class="form-control">
 </div>
 <div class="form-group">
     <label for="email">Email</label>
-    <input id="email" class="form-control" type="email">
+    <input [(ngModel)]="usuario.email" name="email" id="email" class="form-control" type="email">
 </div>
-<input type="submit" value="Salvar">
+<input type="submit" value="Salvar" class="btn btn-primary">
 </form>

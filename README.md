@@ -5,7 +5,7 @@ iniciando o proejeto e instalando as dependencias
 (na pasta do projeto rodar ) `npm install`
 
 Instalando o angular
-`npm install i -g @angular/cli`
+`npm install -g @angular/cli`
 
 Criar um novo Projeto
 `ng new nomeDoPrjoeto`

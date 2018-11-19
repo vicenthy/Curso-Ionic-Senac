@@ -1,7 +1,7 @@
 # Curso-Ionic-Senac<br />
 Repositório Curso de Ionic Senac RJ Duque de Caxias<br />
 
-##projetos Angular<br />
+## Projetos Angular<br />
 iniciando o proejeto e instalando as dependencias(projetos existentes)<br />
 (na pasta do projeto rodar ) `npm install`<br />
 
@@ -22,7 +22,7 @@ para gerar componentes `ng generate component nomeComponente`<br />
 outra configurações<br />
 `ng generate directive|pipe|service|class|guard|interface|enum|module.`<br />
 
-##Projeto Ionic<br />
+## Projeto Ionic<br />
 iniciando o proejeto e instalando as dependencias(projetos existentes)<br />
 (na pasta do projeto rodar ) `npm install`<br />
 

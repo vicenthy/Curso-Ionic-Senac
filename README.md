@@ -1,7 +1,8 @@
 # Curso-Ionic-Senac
 Repositório Curso de Ionic Senac RJ Duque de Caxias
 
-iniciando o proejeto e instalando as dependencias
+##projetos Angular
+iniciando o proejeto e instalando as dependencias(projetos existentes)
 (na pasta do projeto rodar ) `npm install`
 
 Instalando o angular
@@ -20,3 +21,16 @@ para gerar componentes `ng generate component nomeComponente`
 
 outra configurações
 `ng generate directive|pipe|service|class|guard|interface|enum|module.`
+
+##Projeto Ionic
+iniciando o proejeto e instalando as dependencias(projetos existentes)
+(na pasta do projeto rodar ) `npm install`
+
+Instalação do Ionic cli
+`npm install -g ionic@3.20.1 --save-exact
+` 
+Instalação do cordova
+`npm install -g cordova@8.0.0  --save-exact
+`
+
+

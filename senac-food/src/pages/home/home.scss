@@ -1,3 +1,11 @@
 page-home {
 
+  .item-md{
+    opacity: .8;
+  }
+  .homeBackground{
+    background-image: url('../assets/img/bg-login.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 }

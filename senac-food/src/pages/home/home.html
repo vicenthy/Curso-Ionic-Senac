@@ -1,19 +1,21 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
+  <ion-navbar color="primary">
+    <ion-title text-center>
       Senac Food
     </ion-title>
+    <ion-searchbar></ion-searchbar>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
+<ion-content padding class="homeBackground">
 <ion-list>
-  <ion-item>
+  <ion-item *ngFor="let restaurante of restaurantes">
     <ion-avatar item-start>
-      <img src="../assets/img/restaurants/breadbakery.png" />
+      <img src="../{{restaurante.imagePath}}" />
     </ion-avatar>
-    <h1>Bread & Bakery</h1>
-    <h2>Padaria</h2>
-    <p>A Bread & Brakery tem 40 anos de mercado. Fazemos</p>
+    <h1>{{restaurante.name}}</h1>
+    <h2>{{restaurante.category}}</h2>
+    <ion-icon color="star" name="star" ></ion-icon><label>{{restaurante.rating}}</label>
+    <p>{{restaurante.about}}</p>
   </ion-item>
 </ion-list>
 

@@ -10,6 +10,7 @@ import { RestaurantePage } from '../pages/restaurante/restaurante';
 import { PedidoPage } from '../pages/pedido/pedido';
 import { ItemPedidoPage } from '../pages/item-pedido/item-pedido';
 import { RestauranteProvider } from '../providers/restaurante/restaurante';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RestauranteProvider } from '../providers/restaurante/restaurante';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

@@ -7,7 +7,7 @@ import { Injectable } from "@angular/core";
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
-export const API_URL = "http://localhost:3000";
+export const API_URL = "http://192.168.43.190:3000";
 
 @Injectable()
 export class RestauranteProvider {

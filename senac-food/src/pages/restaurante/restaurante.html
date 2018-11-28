@@ -7,12 +7,30 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>restaurante</ion-title>
+    <ion-title>{{restaurante.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
-
-
 <ion-content padding>
-
+<ion-list>
+    <ion-item *ngFor="let produto of produtos">
+      <ion-avatar item-start>
+        <img src="./{{produto.imagePath}}">
+      </ion-avatar>
+      <h2>{{produto.name}}</h2>
+      <h3>{{produto.description}}</h3>
+      <label>{{produto.price | currency:'BRL' }}</label>
+    </ion-item>
+</ion-list>
+<h2>Avaliações</h2>
+<ion-list>
+    <ion-item *ngFor="let review of reviews">
+      <ion-avatar item-start>
+        <img src="../assets/img/avatar.png">
+      </ion-avatar>
+      <h2>{{review.name}}</h2>
+      <h3>{{review.comments}}</h3>
+      <label>{{review.rating}}</label>
+    </ion-item>
+</ion-list>
 </ion-content>

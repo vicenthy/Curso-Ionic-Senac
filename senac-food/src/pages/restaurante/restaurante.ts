@@ -16,10 +16,22 @@ import { RestauranteProvider } from '../../providers/restaurante/restaurante';
 })
 export class RestaurantePage {
 
+  restaurante:any;
+  produtos = [];
+  reviews = [];
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public restauranteProvider:RestauranteProvider) {
-                console.log(this.navParams.get("restaurante"))
+           this.restaurante =  this.navParams.get("restaurante");
+
+           this.restauranteProvider
+           .getProdutosByRestaurante(this.restaurante.id)
+           .then( (produtos:any) => this.produtos = produtos);
+
+           this.restauranteProvider
+           .getReviewByRestaurante(this.restaurante.id)
+           .then( (reviews:any) => this.reviews = reviews )
+
 
       }
 

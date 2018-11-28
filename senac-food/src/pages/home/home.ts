@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestauranteProvider } from '../../providers/restaurante/restaurante';
+import { RestaurantePage } from '../restaurante/restaurante';
 
 @Component({
   selector: 'page-home',
@@ -17,5 +18,11 @@ export class HomePage {
   } ).catch( err => console.error(err));
 
   }
+
+  openRestaurante(restaurante){
+    this.navCtrl.push(RestaurantePage, { restaurante:restaurante });
+
+  }
+
 
 }

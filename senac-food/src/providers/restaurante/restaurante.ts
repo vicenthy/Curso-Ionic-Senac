@@ -23,8 +23,28 @@ export class RestauranteProvider {
             }, error => {
               reject(error);
             } )
-
     })
   }
+
+  public getReviewByRestaurante(restaurante:string){
+    return new Promise( (resolver, reject) => {
+    this.http.get(API_URL + `/reviews?restaurantId=${restaurante}`)
+    .subscribe( (result:any) => {
+      resolver(result);
+    }, error => {
+      reject(error);
+    } )
+})
+  }
+  public getProdutoByRestaurante(restaurante:string){
+    return new Promise( (resolver, reject) => {
+      this.http.get(API_URL + `/produto?restaurantId=${restaurante}`)
+      .subscribe( (result:any) => {
+        resolver(result);
+      }, error => {
+        reject(error);
+      } )
+  }
+
 
 }

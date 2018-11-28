@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RestauranteProvider } from '../../providers/restaurante/restaurante';
 
 /**
  * Generated class for the RestaurantePage page.
@@ -15,8 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RestaurantePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public restauranteProvider:RestauranteProvider) {
+                console.log(this.navParams.get("restaurante"))
+
+      }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RestaurantePage');

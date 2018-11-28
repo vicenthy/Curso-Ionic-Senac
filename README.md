@@ -33,3 +33,15 @@ Instalação do cordova<br />
 `npm install -g cordova@8.0.0  --save-exact`<br />
 
 
+## Rodando json-server
+`json-server nomedoarquivo.json` ou <br />
+`json-server nomedoarquivo.json --host ip_maquina`<br />
+
+## Rodando App ionic
+Lista de comandos ionic server -> https://ionicframework.com/docs/cli/serve/ <br />
+
+Lista de comandos ionic generate -> https://ionicframework.com/docs/cli/generate/ <br />
+
+Lista de comandos completa -> https://ionicframework.com/docs/cli/commands.html <br />
+
+
